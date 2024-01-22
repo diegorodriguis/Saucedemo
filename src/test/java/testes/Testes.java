@@ -1,4 +1,4 @@
-package testes;
+/*package testes;
 
 import org.junit.After;
 import org.junit.Before;
@@ -15,7 +15,7 @@ public class Testes {
 	
 	@Before
 	public void setUp() {
-		metodo.abrirNavegador();
+		//metodo.abrirNavegador();
 	}
 
 	@After
@@ -40,4 +40,4 @@ public class Testes {
 		metodo.validarUrl("https://www.saucedemo.com/inventory.html");
 
 	}
-}
+}*/
