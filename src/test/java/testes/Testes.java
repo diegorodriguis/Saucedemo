@@ -20,7 +20,7 @@ public class Testes {
 
 	@After
 	public void close() {
-		metodo.fecharNavegador();
+		//metodo.fecharNavegador();
 
 	}
 
