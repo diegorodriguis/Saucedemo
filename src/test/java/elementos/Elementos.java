@@ -9,5 +9,7 @@ public class Elementos {
 	public static By password = By.id("password");
 	public static By btLogin = By.id("login-button");
 	public static By validacaoTilte =  By.xpath("//title[contains(text(), 'Swag Labs')]");
+    
+	
 
 }
