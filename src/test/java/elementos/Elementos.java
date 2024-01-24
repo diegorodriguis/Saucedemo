@@ -8,7 +8,7 @@ public class Elementos {
 	private By username = By.id("user-name");
 	private By password = By.id("password");
 	private By btLogin = By.id("login-button");
-	private By validacaoTilte = By.xpath("//title[contains(text(), 'Swag Labs')]");
+	private By validacaoTitle = By.xpath("//title[contains(text(), 'Swag Labs')]");
 
 	public By getUsername() {
 		return username;
@@ -34,12 +34,12 @@ public class Elementos {
 		this.btLogin = btLogin;
 	}
 
-	public By getValidacaoTilte() {
-		return validacaoTilte;
+	public By getValidacaoTitle() {
+		return validacaoTitle;
 	}
 
-	public void setValidacaoTilte(By validacaoTilte) {
-		this.validacaoTilte = validacaoTilte;
+	public void setValidacaoTilte(By validacaoTitle) {
+		this.validacaoTitle = validacaoTitle;
 	}
 
 
