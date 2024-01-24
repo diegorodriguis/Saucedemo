@@ -4,7 +4,6 @@ package elementos;
 import org.openqa.selenium.By;
 
 public class Elementos {
-<<<<<<< HEAD
 
 	private By username = By.id("user-name");
 	private By password = By.id("password");
@@ -42,14 +41,6 @@ public class Elementos {
 	public void setValidacaoTilte(By validacaoTilte) {
 		this.validacaoTilte = validacaoTilte;
 	}
-=======
-	
-	public static By username = By.id("user-name");
-	public static By password = By.id("password");
-	public static By btLogin = By.id("login-button");
-	public static By validacaoTilte =  By.xpath("//title[contains(text(), 'Swag Labs')]");
-    
-	
->>>>>>> branch 'master' of https://github.com/diegorodriguis/Saucedemo.git
+
 
 }
