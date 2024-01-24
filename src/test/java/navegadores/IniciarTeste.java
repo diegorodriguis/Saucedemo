@@ -1,4 +1,4 @@
-package conf;
+package navegadores;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 

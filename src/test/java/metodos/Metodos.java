@@ -8,7 +8,7 @@ import conexao.Driver;
 
 public class Metodos extends Driver {
 
-	public void escrever(By elemento, String texto) {
+	public static void escrever(By elemento, String texto) {
 
 		try {
 			driver.findElement(elemento).sendKeys(texto);
@@ -22,7 +22,7 @@ public class Metodos extends Driver {
 
 	}
 
-	public void clicar(By elemento) {
+	public static void clicar(By elemento) {
 
 		try {
 			driver.findElement(elemento).click();
@@ -36,7 +36,7 @@ public class Metodos extends Driver {
 
 	}
 
-	public void validarTitle(By elemento, String titleEsperado) {
+	public static void validarTitle(By elemento, String titleEsperado) {
 		try {
 			String titleCapturado = driver.getTitle();
 			assertEquals(titleEsperado, titleCapturado);
@@ -50,7 +50,7 @@ public class Metodos extends Driver {
 
 	}
 
-	public void validarUrl(String urlEsperada) {
+	public static void validarUrl(String urlEsperada) {
 
 		try {
 			assertEquals(urlEsperada, driver.getCurrentUrl());
@@ -63,7 +63,7 @@ public class Metodos extends Driver {
 		}
 	}
 
-	public void validarTexto(By elemento, String textoEsperado) {
+	public static void validarTexto(By elemento, String textoEsperado) {
 		try {
 			String textoCapturado = driver.findElement(elemento).getText();
 			assertEquals(textoEsperado, textoCapturado);
@@ -75,5 +75,18 @@ public class Metodos extends Driver {
 
 		}
 
+	}
+	
+	public static void validarUrllogada(String urlEsperada) {
+
+		try {
+			assertEquals(urlEsperada, driver.getCurrentUrl());
+			
+		} catch (Exception e) {
+		
+			System.out.println("*******Causa do erro********" + e.getCause());
+			System.out.println("*******Mensagem do erro********" + e.getMessage());
+
+		}
 	}
 }
