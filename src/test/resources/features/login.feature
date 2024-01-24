@@ -1,4 +1,4 @@
-#Author: 
+#Author: Eduardo Maia e Diego Rodrigues
 
 @regressivos
 Feature: Efetuar login no site saucedemo

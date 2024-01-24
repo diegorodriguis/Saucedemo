@@ -15,9 +15,9 @@ public class FuncionalidadeLoginTeste {
 	@Given("que esteja na tela de login {string}")
 	public void queEstejaNaTelaDeLogin(String url) {
 		Executa.configurarAmbiente(url);
-		metodo.escrever(elemento.getUsername(), "standard_user");
-		metodo.escrever(elemento.getPassword(), "secret_sauce");
-		metodo.clicar(elemento.getBtLogin());
+		Metodos.escrever(elemento.getUsername(), "standard_user");
+		Metodos.escrever(elemento.getPassword(), "secret_sauce");
+		Metodos.clicar(elemento.getBtLogin());
 	}
 
 	@When("enviar os dados de login")
