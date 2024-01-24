@@ -8,7 +8,7 @@ Feature: Efetuar login no site saucedemo
 
 @positivo
   Scenario: Login com sucesso
-    Given que esteja na tela de login
+    Given que esteja na tela de login "https://www.saucedemo.com"
     When enviar os dados de login
     Then login realizado com sucesso
     
