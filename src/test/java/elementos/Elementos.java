@@ -9,6 +9,7 @@ public class Elementos {
 	private By password = By.id("password");
 	private By btLogin = By.id("login-button");
 	private By validacaoTitle = By.xpath("//title[contains(text(), 'Swag Labs')]");
+	private By validacaoMsg = By.xpath("//button[@class='error-button']");
 
 	public By getUsername() {
 		return username;
@@ -42,5 +43,12 @@ public class Elementos {
 		this.validacaoTitle = validacaoTitle;
 	}
 
-
+    public By getValidacaoMsg() {
+    	return validacaoMsg;
+    	
+    }
+    
+    public void setValidacaoMsg(By validacaoMsg) {
+    	this.validacaoMsg = validacaoMsg;
+    }
 }

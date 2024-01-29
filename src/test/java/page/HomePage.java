@@ -20,8 +20,15 @@ public class HomePage {
 		Metodos.clicar(elemento.getBtLogin());
 	}
 	
-	public void loginComSucesso() {	
+	public void login() {	
 		Metodos.clicar(elemento.getBtLogin());
 		Executa.encerrarTeste();
 }
+	
+	public void dadosSenhaEmBranco() {		
+		Metodos.escrever(elemento.getUsername(), "standard_user");
+		Metodos.clicar(elemento.getBtLogin());
+		Metodos.validarTexto(elemento.getValidacaoMsg(), "Epic sadface: Password is required");
+        Executa.encerrarTeste();	
+	}
 }
