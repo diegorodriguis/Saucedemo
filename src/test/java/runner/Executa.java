@@ -13,7 +13,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 @CucumberOptions(
 		features = "src/test/resources",
 		glue = "steps",
-		tags = "@regressivos",
+		tags = "@negativo",
 		dryRun = false,
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,

@@ -10,6 +10,7 @@ public class Elementos {
 	private By btLogin = By.id("login-button");
 	private By validacaoTitle = By.xpath("//title[contains(text(), 'Swag Labs')]");
 	private By validacaoMsg = By.xpath("//button[@class='error-button']");
+	private By msgSenhaEmBranco = By.cssSelector("[class='error-message-container error']");
 
 	public By getUsername() {
 		return username;
@@ -51,4 +52,12 @@ public class Elementos {
     public void setValidacaoMsg(By validacaoMsg) {
     	this.validacaoMsg = validacaoMsg;
     }
+
+	public By getMsgSenhaEmBranco() {
+		return msgSenhaEmBranco;
+	}
+
+	public void setMsgSenhaEmBranco(By msgSenhaEmBranco) {
+		this.msgSenhaEmBranco = msgSenhaEmBranco;
+	}
 }

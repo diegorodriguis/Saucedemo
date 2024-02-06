@@ -28,7 +28,7 @@ public class HomePage {
 	public void dadosSenhaEmBranco() {		
 		Metodos.escrever(elemento.getUsername(), "standard_user");
 		Metodos.clicar(elemento.getBtLogin());
-		Metodos.validarTexto(elemento.getValidacaoMsg(), "Epic sadface: Password is required");
+		Metodos.validarTexto(elemento.getMsgSenhaEmBranco(), "Epic sadface: Password is required");
         Executa.encerrarTeste();	
 	}
 }
