@@ -31,7 +31,7 @@ public class Executa extends Driver {
 	}
 	
 	public static void encerrarTeste() {
-		driver.quit();
+		//driver.quit();
 	}
 
 }

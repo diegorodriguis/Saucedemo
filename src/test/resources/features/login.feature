@@ -17,14 +17,14 @@ Feature: Efetuar login no site saucedemo
 @negativo
 Scenario: Login invalido senha em branco   
     When preencher o usuario
-    But nao  preencher a senha
+    But nao preencher a senha
     And clicar no botao login
     Then login nao realizado com mensagem de senha obrigatoria 
     
 
 Scenario: Login invalido usuario em branco
-When preencher o usuario
-    But nao  preencher o usuario
+    When nao preencher o usuario
+    But preencher a senha
     And clicar no botao login
     Then login nao realizado com mensagem de usuario obrigatoria   
   
