@@ -30,26 +30,39 @@ public class FuncionalidadeLoginTeste {
 
 	@When("preencher o usuario")
 	public void preencherOUsuario() {
-		home.dadosSenhaEmBranco();
+		home.dadosSenhaEmBranco("standard_user");
 
 	}
 
 	@When("nao  preencher a senha")
 	public void naoPreencherASenha() {
-		home.dadosSenhaEmBranco();
+		home.dadosSenhaEmBranco("");
+		
 
 	}
 
 	@When("clicar no botao login")
 	public void clicarNoBotaoLogin() {
-		home.dadosSenhaEmBranco();
+		home.login();
+
 
 	}
 
-	@Then("login não realizado com mensagem de senha obrigatoria")
-	public void loginNãoRealizadoComMensagemDeSenhaObrigatoria() {
-		home.dadosSenhaEmBranco();
+	@Then("login nao realizado com mensagem de senha obrigatoria")
+	public void loginNaoRealizadoComMensagemDeSenhaObrigatoria() {
+		home.dadosSenhaEmBranco("Epic sadface: Password is required");
 
+	}
+	
+	@When("nao  preencher o usuario")
+	public void naoPreencherOUsuario() {
+		home.dadosUsuarioEmBranco("");
+	   
+	}
+	@Then("login nao realizado com mensagem de usuario obrigatoria")
+	public void loginNaoRealizadoComMensagemDeUsuarioObrigatoria() {
+		home.dadosUsuarioEmBranco("Epic sadface: Username is required");
+	    
 	}
 
 }

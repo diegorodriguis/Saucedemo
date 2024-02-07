@@ -7,13 +7,12 @@ import conexao.Driver;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/resources",
 		glue = "steps",
-		tags = "@negativo",
+		tags = "@regressivo",
 		dryRun = false,
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,
@@ -24,7 +23,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Executa extends Driver {
 		
 	public static void configurarAmbiente(String url) {
-		WebDriverManager.chromedriver().setup();
+		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(url);

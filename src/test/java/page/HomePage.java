@@ -6,7 +6,7 @@ import runner.Executa;
 
 public class HomePage {
 
-	Metodos metodo = new Metodos();
+	
 	Elementos elemento = new Elementos();
 
 	public void telaDeLogin(String url) {
@@ -18,6 +18,7 @@ public class HomePage {
 		Metodos.escrever(elemento.getUsername(), "standard_user");
 		Metodos.escrever(elemento.getPassword(), "secret_sauce");
 		Metodos.clicar(elemento.getBtLogin());
+		
 	}
 	
 	public void login() {	
@@ -25,10 +26,19 @@ public class HomePage {
 		Executa.encerrarTeste();
 }
 	
-	public void dadosSenhaEmBranco() {		
+	public void dadosSenhaEmBranco(String dados) {		
 		Metodos.escrever(elemento.getUsername(), "standard_user");
+		Metodos.escrever(elemento.getPassword(), "");
 		Metodos.clicar(elemento.getBtLogin());
 		Metodos.validarTexto(elemento.getMsgSenhaEmBranco(), "Epic sadface: Password is required");
         Executa.encerrarTeste();	
 	}
-}
+	
+	public void dadosUsuarioEmBranco(String dados) {		
+		Metodos.escrever(elemento.getUsername(), "");
+		Metodos.escrever(elemento.getPassword(), "secret_sauce");
+		Metodos.clicar(elemento.getBtLogin());
+		Metodos.validarTexto(elemento.getMsgSenhaEmBranco(), "Epic sadface: Username is required");
+        Executa.encerrarTeste();	
+	
+}}
