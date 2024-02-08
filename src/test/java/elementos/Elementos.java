@@ -12,6 +12,8 @@ public class Elementos {
 	private By validacaoMsg = By.xpath("//button[@class='error-button']");
 	private By msgSenhaEmBranco = By.xpath("//h3[@data-test='error']");
 	private By msgUsuarioEmBranco = By.xpath("//h3[@data-test='error']");
+	private By msgUsuarioSenhaErrada = By.xpath("//h3[@data-test='error']");
+			
 
 	public By getUsername() {
 		return username;
@@ -67,4 +69,12 @@ public class Elementos {
 	}
 	public void setMsgUsuarioEmBranco(By msgUsuarioEmBranco) {
 		this.msgUsuarioEmBranco = msgUsuarioEmBranco;
-}}
+}
+
+	public By getMsgUsuarioSenhaErrada() {
+		return msgUsuarioSenhaErrada;
+	}
+
+	public void setMsgUsuarioSenhaErrada(By msgUsuarioSenhaErrada) {
+		this.msgUsuarioSenhaErrada = msgUsuarioSenhaErrada;
+	}}

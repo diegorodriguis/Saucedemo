@@ -62,5 +62,47 @@ public class FuncionalidadeLoginTeste {
 	public void loginNaoRealizadoComMensagemDeUsuarioObrigatoria() {
 		home.validaMensagemLoginUsuarioEmBranco();
 	}
+	
+	//Novas funcionalidades 08/02
+	
+	
+	@When("preencher o usuario com dado invalido")
+	public void preencherOUsuarioComDadoInvalido() {
+	    
+	}
+	@When("preencher a senha corretamente")
+	public void preencherASenhaCorretamente() {
+		home.dadosUsuarioErrado();
+	    
+	
+	    
+	}
+	@Then("login nao realizado com mensagem de usuario incorreto")
+	public void loginNaoRealizadoComMensagemDeUsuarioIncorreto() {
+		home.validarMensagemLoginSenhaErrada();
+	    
+	}
+
+
+	
+	@When("preencher a senha com dado invalido")
+	public void preencherASenhaComDadoInvalido() {
+		home.dadosSenhaErrada();
+		
+	    
+	}
+	@When("preencher o usuario corretamente")
+	public void preencherOUsuarioCorretamente() {
+		
+	    
+
+	    
+	}
+	@Then("login nao realizado com mensagem de senha incorreta")
+	public void loginNaoRealizadoComMensagemDeSenhaIncorreta() {
+		home.validarMensagemLoginSenhaErrada();
+	    
+	}
+
 
 }
