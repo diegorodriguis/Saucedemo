@@ -13,6 +13,7 @@ public class Elementos {
 	private By msgSenhaEmBranco = By.xpath("//h3[@data-test='error']");
 	private By msgUsuarioEmBranco = By.xpath("//h3[@data-test='error']");
 	private By msgUsuarioSenhaErrada = By.xpath("//h3[@data-test='error']");
+	private By msgUsuarioBloqueado = By.xpath("//h3[@data-test='error']");
 			
 
 	public By getUsername() {
@@ -77,4 +78,12 @@ public class Elementos {
 
 	public void setMsgUsuarioSenhaErrada(By msgUsuarioSenhaErrada) {
 		this.msgUsuarioSenhaErrada = msgUsuarioSenhaErrada;
+	}
+
+	public By getMsgUsuarioBloqueado() {
+		return msgUsuarioBloqueado;
+	}
+
+	public void setMsgUsuarioBloqueado(By msgUsuarioBloqueado) {
+		this.msgUsuarioBloqueado = msgUsuarioBloqueado;
 	}}

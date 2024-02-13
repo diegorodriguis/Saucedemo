@@ -13,25 +13,29 @@ public class HomePage {
 
 	}
 
-	public void dadosDeLogin() {
+	public void dadosUsername() {
 		Metodos.escrever(elemento.getUsername(), "standard_user");
-		Metodos.escrever(elemento.getPassword(), "secret_sauce");
+		
 
 	}
+	
+	public void dadosPassword() {		
+		Metodos.escrever(elemento.getPassword(), "secret_sauce");
+		
+	}
 
-	public void login() {
+	public void buttonLogin() {
 		Metodos.clicar(elemento.getBtLogin());
 	}
 
-	public void dadosSenhaEmBranco() {
-		Metodos.escrever(elemento.getUsername(), "standard_user");
+	public void passwordEmBranco() {
 		Metodos.escrever(elemento.getPassword(), "");
 	}
 		
 
-	public void dadosUsuarioEmBranco() {
+	public void usernameEmBranco() {
 		Metodos.escrever(elemento.getUsername(), "");
-		Metodos.escrever(elemento.getPassword(), "secret_sauce");
+		
 
 	}
 	public void validaMensagemLoginUsuarioEmBranco() {
@@ -47,15 +51,23 @@ public class HomePage {
 		
 	}
 	
-	public void dadosUsuarioErrado() {
+	public void usernameErrado() {
 		Metodos.escrever(elemento.getUsername(), "teste");
-		Metodos.escrever(elemento.getPassword(),"secret_sauce");
+		
 		
 	}
 	
-	public void dadosSenhaErrada() {
-		Metodos.escrever(elemento.getUsername(), "standard_user");
+	public void passwordErrado() {	
 		Metodos.escrever(elemento.getPassword(),"teste");
+		
+	}
+	public void usernameBloqueado() {
+		Metodos.escrever(elemento.getUsername(), "locked_out_user");
+		
+	}
+	
+	public void validarMensagemLoginUsuarioBloqueado() {
+		Metodos.validarTexto(elemento.getMsgUsuarioBloqueado(), "Epic sadface: Sorry, this user has been locked out.");
 		
 	}
 }

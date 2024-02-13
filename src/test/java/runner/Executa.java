@@ -10,9 +10,9 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources",
+		features = "src/test/resources/features",
 		glue = "steps",
-		tags = "@regressivo",
+		tags = "@regressivoLogin",
 		dryRun = false,
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,
@@ -31,7 +31,7 @@ public class Executa extends Driver {
 	}
 	
 	public static void encerrarTeste() {
-		//driver.quit();
+		driver.quit();
 	}
 
 }
