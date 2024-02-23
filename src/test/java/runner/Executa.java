@@ -30,8 +30,12 @@ public class Executa extends Driver {
 		
 	}
 	
-	public static void encerrarTeste() {
+	public static void encerrarTest() {
 		driver.quit();
 	}
 
-}
+	
+		
+	}
+
+

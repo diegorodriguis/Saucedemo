@@ -1,73 +1,119 @@
 package page;
 
-import elementos.Elementos;
+import elementos.ElementosLogin;
 import metodos.Metodos;
-import runner.Executa;
 
 public class HomePage {
 
-	Elementos elemento = new Elementos();
+	ElementosLogin eleLogin = new ElementosLogin();
 
-	public void telaDeLogin(String url) {
-		Executa.configurarAmbiente(url);
-
-	}
-
-	public void dadosUsername() {
-		Metodos.escrever(elemento.getUsername(), "standard_user");
+	public void usernamePassword () {
+		Metodos.escrever(eleLogin.getUsername(), "standard_user");
+		Metodos.escrever(eleLogin.getPassword(), "secret_sauce");
 		
-
+		  
+		
 	}
 	
-	public void dadosPassword() {		
-		Metodos.escrever(elemento.getPassword(), "secret_sauce");
+	public void usernameInvalido() {
+		Metodos.escrever(eleLogin.getUsername(), "invalido");
+		Metodos.escrever(eleLogin.getPassword(), "secret_sauce");
+	}
+	
+	public void msgPasswordUsernameInvalido() {
+		Metodos.validarTexto(eleLogin.getMsgUsernameInvalido(), "Epic sadface: Username and password do not match any user in this service");
+		
 		
 	}
-
-	public void buttonLogin() {
-		Metodos.clicar(elemento.getBtLogin());
+	
+	public void passwordInvalido() {
+		Metodos.escrever(eleLogin.getUsername(), "standard_user");
+		Metodos.escrever(eleLogin.getPassword(), "invalido");
 	}
-
-	public void passwordEmBranco() {
-		Metodos.escrever(elemento.getPassword(), "");
-	}
-		
-
+	
+	
 	public void usernameEmBranco() {
-		Metodos.escrever(elemento.getUsername(), "");
-		
-
-	}
-	public void validaMensagemLoginUsuarioEmBranco() {
-		Metodos.validarTexto(elemento.getMsgSenhaEmBranco(), "Epic sadface: Username is required");
-	}
-
-	public void validaMensagemLoginSenhaEmBranco() {
-		Metodos.validarTexto(elemento.getMsgSenhaEmBranco(), "Epic sadface: Password is required");
+		Metodos.escrever(eleLogin.getUsername(), "");
+		Metodos.escrever(eleLogin.getPassword(), "secret_sauce");
 	}
 	
-	public void validarMensagemLoginSenhaErrada() {
-		Metodos.validarTexto(elemento.getMsgUsuarioSenhaErrada(), "Epic sadface: Username and password do not match any user in this service");
-		
+	public void msgUsernameEmBranco() {
+		Metodos.validarTexto(eleLogin.getMsgUsernameEmBranco(), "Epic sadface: Username is required");
+	}                                                          
+	
+	public void passwordEmBranco() {
+		Metodos.escrever(eleLogin.getUsername(), "standard_user");
+		Metodos.escrever(eleLogin.getPassword(), "");
 	}
 	
-	public void usernameErrado() {
-		Metodos.escrever(elemento.getUsername(), "teste");
-		
-		
+	public void msgPasswordEmBranco() {
+		Metodos.validarTexto(eleLogin.getMsgPasswordEmBranco(), "Epic sadface: Password is required");
 	}
 	
-	public void passwordErrado() {	
-		Metodos.escrever(elemento.getPassword(),"teste");
+	public void usernameEpasswordEmBranco() {
+		Metodos.escrever(eleLogin.getUsername(), "");
+		Metodos.escrever(eleLogin.getPassword(), "");
 		
 	}
 	public void usernameBloqueado() {
-		Metodos.escrever(elemento.getUsername(), "locked_out_user");
+		Metodos.escrever(eleLogin.getUsername(), "locked_out_user");
+		Metodos.escrever(eleLogin.getPassword(), "secret_sauce");
+	}
+	
+	
+	public void msgUsernameBloqueado() {
+		Metodos.validarTexto(eleLogin.getMsgUsernameBloqueado(), "Epic sadface: Sorry, this user has been locked out.");
+	
+	}
+	public void usernameComProblema() {
+		Metodos.escrever(eleLogin.getUsername(), "problem_user");
+		Metodos.escrever(eleLogin.getPassword(), "secret_sauce");
+	}
+	
+	public void validarUrlLogada() {
+		Metodos.validarUrl("https://www.saucedemo.com/inventory.html");
 		
 	}
 	
-	public void validarMensagemLoginUsuarioBloqueado() {
-		Metodos.validarTexto(elemento.getMsgUsuarioBloqueado(), "Epic sadface: Sorry, this user has been locked out.");
+	
+	public void usernameComFalha() {
+		Metodos.escrever(eleLogin.getUsername(), "performance_glitch_user");
+		Metodos.escrever(eleLogin.getPassword(), "secret_sauce");
+	}
+	
+	public void validarUrlLogadaComFalha() {
+		Metodos.validarUrl("https://www.saucedemo.com/inventory.html");
+	
+	}
+	
+	public void usernameComErro() {
+		Metodos.escrever(eleLogin.getUsername(), "error_user");
+		Metodos.escrever(eleLogin.getPassword(), "secret_sauce");
+	}
+	
+	public void validarUrlLogadaComErro() {
+		Metodos.validarUrl("https://www.saucedemo.com/inventory.html");
+	
+	}
+	
+	public void usernameComErroVisual() {
+		Metodos.escrever(eleLogin.getUsername(), "visual_user");
+		Metodos.escrever(eleLogin.getPassword(), "secret_sauce");
+	}
+	
+	public void validarUrlLogadaComErroVisual() {
+		Metodos.validarUrl("https://www.saucedemo.com/inventory.html");
+	
+	}
+	public void botaoLogin() {
+		Metodos.clicar(eleLogin.getBtnLogin());
+			
+		}	
+	
+		
+		
+		
 		
 	}
-}
+
+
