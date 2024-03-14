@@ -9,6 +9,14 @@ import runner.Executa;
 
 public class FuncionalidadeLoginTeste {
 
+	String username = "standard_user";
+	String password = "secret_sauce";
+	String usernameBloqueado = "locked_out_user";
+	String usernameComProblema = "problem_user";
+	String usernameComFalha = "performance_glitch_user";
+	String usernameComErro = "error_user";
+	String usernameComErroVisual = "visual_user";
+	
 	HomePage page = new HomePage();
 	
 	@After
@@ -24,7 +32,7 @@ public class FuncionalidadeLoginTeste {
 
 	@When("informar dados validos de login")
 	public void informarDadosValidosDeLogin() {
-		page.usernamePassword();
+		page.usernamePassword(username, password);
 
 	}
 
@@ -36,12 +44,13 @@ public class FuncionalidadeLoginTeste {
 
 	@Then("login efetuado com sucesso direcionando para tela de usuário logado")
 	public void loginEfetuadoComSucessoDirecionandoParaTelaDeUsuárioLogado() {
+		page.validarUrlLogada();
 
 	}
 
 	@When("informar username invalido")
 	public void informarUsernameInvalido() {
-		page.usernameInvalido();
+		page.usernamePassword("invalido", password);
 
 	}
 
@@ -59,7 +68,7 @@ public class FuncionalidadeLoginTeste {
 
 	@When("informar password invalido")
 	public void informarPasswordInvalido() {
-		page.passwordInvalido();
+		page.usernamePassword(username, "invalido");
 
 	}
 
@@ -77,7 +86,7 @@ public class FuncionalidadeLoginTeste {
 
 	@When("deixar o username em branco")
 	public void deixarOUsernameEmBranco() {
-		page.usernameEmBranco();
+		page.usernamePassword("", password);
 
 	}
 
@@ -95,7 +104,7 @@ public class FuncionalidadeLoginTeste {
 
 	@When("deixar o password em branco")
 	public void deixarOPasswordEmBranco() {
-		page.passwordEmBranco();
+		page.usernamePassword(username, "");
 
 	}
 
@@ -111,9 +120,8 @@ public class FuncionalidadeLoginTeste {
 
 	}
 
-	@When("deixar o username e password em branco")
+	@When("deixar o username e password em branco") //verificar no teste
 	public void deixarOUsernameEPasswordEmBranco() {
-		page.usernameEpasswordEmBranco();
 
 	}
 
@@ -132,7 +140,7 @@ public class FuncionalidadeLoginTeste {
 
 	@When("inforamr os dados de username bloqueado")
 	public void inforamrODadosDeUsernameBloqueado() {
-		page.usernameBloqueado();
+		page.usernamePassword(usernameBloqueado, password);
 	    
 	}
 	@When("clicar em login mesmo informando usuario bloqueado")
@@ -147,7 +155,7 @@ public class FuncionalidadeLoginTeste {
 	}
 	@When("informar os dados de username com problema")
 	public void informarOsDadosDeUsernameComProblema() {
-		page.usernameComProblema();
+		page.usernamePassword(usernameComProblema, password);
 	   
 	}
 	@When("clicar em login mesmo informando usuario com problema")
@@ -164,7 +172,8 @@ public class FuncionalidadeLoginTeste {
 		
 	@When("informar os dados de username com falha")
 	public void informarOsDadosDeUsernameComFalha() {
-		page.usernameComFalha();
+		page.usernamePassword(usernameComFalha, password);
+
 	  
 	}
 	@When("clicar em login mesmo informando usuario com falha")
@@ -174,13 +183,13 @@ public class FuncionalidadeLoginTeste {
 	}
 	@Then("direciona para pagina com falha")
 	public void direcionaParaPaginaComFalha() {
-		page.validarUrlLogadaComFalha();
+		page.validarUrlLogada();
 	   
 	}	
 
 	@When("informar os dados de username com erro")
 	public void informarOsDadosDeUsernameComErro() {
-		page.usernameComErro();
+		page.usernamePassword(usernameComErro, password);
 	    
 	}
 	@When("clicar em login mesmo informando usuario com erro")
@@ -190,13 +199,14 @@ public class FuncionalidadeLoginTeste {
 	}
 	@Then("direciona para pagina com erro")
 	public void direcinaParaPaginaComErro() {
-		page.validarUrlLogadaComErro();
+		page.validarUrlLogada();
 	    
 	}	
 	
 	@When("informar os dados de username e password")
 	public void informarOsDadosDeUsernameEPassword() {
-		page.usernameComErroVisual();
+		page.usernamePassword(usernameComErroVisual, password);
+
 	    
 	}
 	@When("clicar em login para seguir")
@@ -206,7 +216,7 @@ public class FuncionalidadeLoginTeste {
 	}
 	@Then("direciona para pagina com erro na imagem")
 	public void direcionaParaPaginaComErroNaImagem() {
-		page.validarUrlLogadaComErroVisual();
+		page.validarUrlLogada();
 	    
 	}
 }

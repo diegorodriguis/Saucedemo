@@ -1,6 +1,6 @@
 #Author: Eduardo Maia e Diego Rodrigues
 
-@regressivoLogin
+@regressivoLogin 
 Feature: Efetuar login no site saucedemo
  Como usuario do site saucedemo
  Quero informar dados de acesso
